@@ -6,7 +6,7 @@ function Header() {
         <>
             <NavBar />
             <section className='section-port'>
-                <h1>Time <span>Cristal</span></h1>
+                <h1>Time <span>Crystal</span></h1>
             </section>
         </>
     )

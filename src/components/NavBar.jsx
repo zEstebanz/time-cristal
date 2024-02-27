@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <nav className='navbar'>
         <div className='navbar-logo'>
-            <a href="/">Time <span>Cristal</span></a>
+            <a href="/">Time <span>Crystal</span></a>
         </div>
         <ul className='navbar-links'>
             <li><a href="/">Home</a></li>
