@@ -2,6 +2,7 @@ import { useState } from 'react'
 import NavBar from './NavBar'
 
 function Header() {
+    // modificar este componente
     return (
         <>
             <NavBar />

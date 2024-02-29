@@ -29,14 +29,14 @@ span{
 }
 
 /* NavBar */
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $color-gris;
     color: $color-blanco;
-    padding: 10px 20px;
+    padding: 10px 20px; 
+    font-weight: 600;
 
     .navbar-logo {
         font-size: 1.5rem;

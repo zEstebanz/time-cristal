@@ -1,5 +1,6 @@
 import React from 'react'
 
+//agregar el componete Link de react-router-dom
 
 function NavBar() {
   return (
