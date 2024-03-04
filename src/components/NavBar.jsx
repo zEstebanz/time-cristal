@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Button } from '@/ui/Button'
 //agregar el componete Link de react-router-dom
 
 function NavBar() {
@@ -11,6 +11,7 @@ function NavBar() {
         <ul className='navbar-links'>
             <li><a href="/">Home</a></li>
             <li><a href="/bloc">Bloc</a></li>
+            <Button>holaaaaa</Button>
         </ul>
     </nav>
   )
