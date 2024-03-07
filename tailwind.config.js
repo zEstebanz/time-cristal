@@ -17,6 +17,16 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        'fondo': '#0F0F0F',
+        'principal': '#4C9F70',
+        'secundario': '#A18262',
+        'gris': '#2D2E2E',
+        'blanco': '#FBFBFB',
+      },
+      fontFamily:{
+        body:['Noto Sans'],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
