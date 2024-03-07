@@ -51,7 +51,7 @@ function NavBar() {
           <li className='pl-4'>
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>GAY</AvatarFallback>
+              <AvatarFallback className='text-principal'>GAY</AvatarFallback>
             </Avatar>
           </li>
         </ul>
