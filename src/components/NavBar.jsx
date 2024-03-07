@@ -7,10 +7,10 @@ function NavBar() {
   const [open, setOpen] = useState(false)
   return (
     <section>
-      <nav className='fixed w-screen flex justify-between items-center px-4 py-2 bg-gris font-semibold text-blanco'>
+      <nav className='z-0 fixed w-screen flex justify-between items-center px-4 py-2 bg-gris font-semibold text-blanco' onClick={()=>(open && setOpen(false))}>
         <ul className='flex h-16 items-center'>
           <li className='pr-1'>
-            <button onClick={()=>(!open ? setOpen(true): setOpen(false))}>
+            <button className='z-10' onClick={()=>(!open ? setOpen(true): setOpen(false))}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-7 w-9 text-blanco hover:text-principal"
