@@ -7,10 +7,10 @@ function NavBar() {
   const [open, setOpen] = useState(false)
   return (
     <section>
-      <nav className='z-0 fixed w-screen flex justify-between items-center px-4 py-2 bg-gris font-semibold text-blanco' onClick={()=>(open && setOpen(false))}>
+      <nav className='z-0 fixed w-screen flex justify-between items-center px-4 py-2 bg-gris font-semibold text-blanco' onClick={() => (open && setOpen(false))}>
         <ul className='flex h-16 items-center'>
           <li className='pr-1'>
-            <button className='z-10' onClick={()=>(!open ? setOpen(true): setOpen(false))}>
+            <button className='z-10' onClick={() => (!open ? setOpen(true) : setOpen(false))}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-7 w-9 text-blanco hover:text-principal"
@@ -57,7 +57,7 @@ function NavBar() {
         </ul>
       </nav>
 
-      <div className={`${!open && 'hidden'} mt-20 bg-gris/40 min-h-screen w-full fixed backdrop-blur-sm`} onClick={()=>setOpen(false)}>
+      <div className={`${!open && 'hidden'} mt-20 bg-gris/40 min-h-screen w-full fixed backdrop-blur-sm`} onClick={() => setOpen(false)}>
       </div>
       <div className={`${open ? ' w-50 px-2' : ' w-0'} flex-col fixed space-y-10 min-h-screen mt-20 justify-between bg-gris transition-all duration-300`}>
         <ul className={`${!open && 'hidden'} `}>
