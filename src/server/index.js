@@ -1,3 +1,6 @@
-import app from "./app.js"
-app.listen(3000)
-console.log('Server on port', 3000)
+import {startTime,port,log,text,sign,sist,href,error,warning,arrow,lamda,app} from "./app.js"
+import { connectDB } from "./db.js";
+app.listen(port);
+connectDB();
+log(text(sist.bold('Node'), `Server ready on ${sign(Date.now() - startTime)} ms
+${arrow} Local:`), href(`http://localhost:${port}/`));
