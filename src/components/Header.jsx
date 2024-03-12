@@ -5,7 +5,6 @@ function Header() {
     // modificar este componente
     return (
         <>
-            <NavBar />
             <section className='bg-fondo min-h-screen'>
                 <h1 className='text-center text-6xl font-semibold font-body pt-80'>
                     <span className='text-blanco'>Time</span>

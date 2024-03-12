@@ -1,12 +1,10 @@
 import './assets/styles/App.scss'
-import Header from './components/Header'
+import AppRouter from './router/AppRouter'
 
 function App() {
 
   return (
-    <main>
-      <Header />
-    </main>
+    <AppRouter />
   )
 }
 
