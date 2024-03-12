@@ -1,6 +1,11 @@
-.title{
-  text-align: center;
-  color: black;
-  font-size: 100px;
-  padding-top: 150px;
+$dark: #222;
+
+.section-home {
+  background-color: $dark;
+  height: 100vh;
+}
+
+.section-form {
+  background-color: $dark;
+  height: 100vh;
 }

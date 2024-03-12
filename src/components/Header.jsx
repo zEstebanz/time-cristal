@@ -2,7 +2,7 @@ import { useState } from 'react'
 import NavBar from './NavBar'
 
 function Header() {
-    // modificar este componente
+    
     return (
         <>
             <section className='bg-fondo min-h-screen'>
