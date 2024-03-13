@@ -27,7 +27,7 @@ function NavBar() {
             </button>
           </li>
           <li>
-            <a href="/" class='logo flex text-2xl'>
+            <a href="/timecrystal" class='logo flex text-2xl'>
               <p class='text-blanco'>Time</p><p class='text-principal'>Crystal</p>
             </a>
           </li>

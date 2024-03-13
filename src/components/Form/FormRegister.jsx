@@ -46,7 +46,7 @@ const FormRegister = () => {
             <div className=''>
                 <Link to={"/login"} className='text-principal'>Login</Link>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex items|-center justify-center">
                 <button
                     className="bg-principal text-blanco font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                     type="submit"
