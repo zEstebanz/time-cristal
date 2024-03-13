@@ -9,6 +9,8 @@ function NavBar() {
     <section>
       <nav className='z-0 fixed w-screen flex justify-between items-center px-4 py-2 bg-gris font-semibold text-blanco' onClick={() => (open && setOpen(false))}>
         <ul className='flex h-16 items-center'>
+
+          {/* Menu Icon */}
           <li className='pr-1'>
             <button className='z-10' onClick={() => (!open ? setOpen(true) : setOpen(false))}>
               <svg
@@ -26,11 +28,16 @@ function NavBar() {
               </svg>
             </button>
           </li>
+          {/* End Menu Icon */}
+
+          {/* Logo */}
           <li>
             <a href="/timecrystal" class='logo flex text-2xl'>
               <p class='text-blanco'>Time</p><p class='text-principal'>Crystal</p>
             </a>
           </li>
+          {/*End Logo */}
+
         </ul>
         <ul className='flex h-16 items-center'>
           <li className='notificacion pl-4'><a href="/"><svg
