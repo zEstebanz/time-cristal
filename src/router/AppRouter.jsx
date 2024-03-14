@@ -16,12 +16,10 @@ const AppRouter = () => {
             <Route path='/register' element={<Register />} />
             <Route path='/' element={<Home />} />
             <Route path='/timecrystal' element={<TimeCrystal />} />
-
             <Route path='/notes' element={<Notes />} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/calendar' element={<Calendar />} />
             <Route path='/rutine' element={<Rutine />} />
-
         </Routes>
     )
 }

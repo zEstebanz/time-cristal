@@ -1,8 +1,9 @@
 import NavBar from './NavBar'
-import Calendar from './Home/Calendar'
-import Time from './Home/Time'
-import Project from './Home/Project'
-import { Link } from 'react-router-dom'
+import CardTime from './Home/CardTime'
+import Projects from './Home/Projects'
+import Diary from './Home/Diary'
+import Rutine from './Home/Rutine'
+import Notes from './Home/Notes'
 
 function Header() {
 
@@ -13,68 +14,12 @@ function Header() {
 
                 <div className="card-container">
 
-                    <div className='calendar'>
-                        <Link to={"/calendar"}>
-                            <h1>Calendar</h1>
-                        </Link>
-                        <Calendar />
-                        <hr />
-                        <h1>Recordatorios</h1>
-                        <div className='reminder text-center'>
-                            <h3>Fecha: [Fecha del recordatorio]</h3>
-                            <h2>Título del recordatorio</h2>
-                        </div>
-                    </div>
+                    <Diary />
+                    <CardTime />
+                    <Rutine />
+                    <Notes />
+                    <Projects />
 
-
-                    <div className='time'>
-                        <Time />
-                    </div>
-
-                    <div className='card-rutine'>
-                        <Link to={"/rutine"}>
-                            <h1>Rutine</h1>
-                        </Link>
-                        <hr />
-                        <div className="list-rutine">
-                            <ul>
-                                <li>
-                                    <input type="checkbox" id="task1" />
-                                    <label htmlFor="task1">Task 1</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="task2" />
-                                    <label htmlFor="task2">Task 2</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="task3" />
-                                    <label htmlFor="task3">Task 3</label>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="container-button">
-                            <button className='button-rutine'> + Create new task</button>
-                        </div>
-
-                        <hr style={{ marginTop: '20px' }} />
-
-
-                    </div>
-
-                    <div className='note'>
-                        <Link to={"/notes"}>
-                            <h1>Notes</h1>
-                        </Link>
-                        <button className='button-note'> + Create new note</button>
-                    </div>
-
-                    <div className='projects'>
-                        <Link to={"/projects"}>
-                            <h1>Projects</h1>
-                        </Link>
-                        <Project />
-                    </div>
                 </div>
 
             </section>

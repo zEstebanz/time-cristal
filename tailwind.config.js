@@ -19,7 +19,7 @@ module.exports = {
     extend: {
       colors: {
         'fondo': '#0F0F0F',
-        'principal': '#4C9F70',
+        'principal': '#27c096', //anterio -> 4C9F70
         'secundario': '#A18262',
         'gris': '#2D2E2E',
         'blanco': '#FBFBFB',

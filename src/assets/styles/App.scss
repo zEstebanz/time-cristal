@@ -10,11 +10,22 @@ $turquesa: #27c096;
   min-height: 100vh;
   height: auto;
   padding-top: 100px;
+  z-index: 0;
+
+  /* Habilitar desplazamiento horizontal */
+  overflow-x: auto;
+  white-space: nowrap;
+  /* Evita que los elementos se dividan en múltiples líneas */
+
 
   .card-container {
     position: relative;
-    width: 100%;
     height: 100vh;
+    /* Otros estilos */
+    width: auto;
+    /* Ajustar el ancho automáticamente */
+    min-width: 100%;
+    /* Garantizar que ocupe todo el ancho disponible */
   }
 
   .calendar {
@@ -302,6 +313,9 @@ $turquesa: #27c096;
   background-color: $dark;
   height: 100vh;
 }
+
+/* Componentes */
+
 
 // 'fondo': '#0F0F0F',
 //         'principal': '#4C9F70',
