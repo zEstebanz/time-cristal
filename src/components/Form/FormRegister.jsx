@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FormRegister = () => {
-    
+
     const handleSubmit = (event) => {
         event.preventDefault();
         // Aquí puedes manejar la lógica de envío del formulario
@@ -15,7 +15,7 @@ const FormRegister = () => {
                     Username
                 </label>
                 <input
-                    className="appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-blanco leading-tight focus:outline-none focus:shadow-outline"
+                    className="appearance-none border-none rounded w-full py-2 px-3 text-gray-700 bg-[#222] leading-tight focus:outline-none focus:shadow-outline text-white"
                     id="username"
                     type="text"
                     placeholder="Enter your username"
@@ -26,7 +26,7 @@ const FormRegister = () => {
                     Mail
                 </label>
                 <input
-                    className="appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-blanco leading-tight focus:outline-none focus:shadow-outline"
+                    className="appearance-none border-none rounded w-full py-2 px-3 text-gray-700 bg-[#222] leading-tight focus:outline-none focus:shadow-outline text-white"
                     id="mail"
                     type="text"
                     placeholder="Enter your mail"
@@ -37,16 +37,16 @@ const FormRegister = () => {
                     Password
                 </label>
                 <input
-                    className="appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-blanco leading-tight focus:outline-none focus:shadow-outline"
+                    className="appearance-none border-none rounded w-full py-2 px-3 text-gray-700 bg-[#222] leading-tight focus:outline-none focus:shadow-outline text-white"
                     id="password"
                     type="password"
                     placeholder="Enter your password"
                 />
             </div>
-            <div className=''>
-                <Link to={"/login"} className='text-principal'>Login</Link>
+            <div className='mb-4'>
+                <Link to={"/login"} className='text-blanco'>Ya tienes cuentas? <span className='text-principal'>Iniciar Sesion</span></Link>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex items|-center justify-center">
                 <button
                     className="bg-principal text-blanco font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                     type="submit"

@@ -7,10 +7,12 @@ function NavBar() {
   const [open, setOpen] = useState(false)
   return (
     <section>
-      <nav className='z-0 fixed w-screen flex justify-between items-center px-4 py-2 bg-gris font-semibold text-blanco' onClick={() => (open && setOpen(false))}>
+      <nav className='z-10 fixed w-screen flex justify-between items-center px-4 py-2 bg-gris font-semibold text-blanco' onClick={() => (open && setOpen(false))}>
         <ul className='flex h-16 items-center'>
-          <li className='pr-1'>
-            <button className='z-10' onClick={() => (!open ? setOpen(true) : setOpen(false))}>
+
+          {/* Menu Icon */}
+          <li className='pr-10'>
+            <button className='z-20' onClick={() => (!open ? setOpen(true) : setOpen(false))}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-7 w-9 text-blanco hover:text-principal"
@@ -26,11 +28,16 @@ function NavBar() {
               </svg>
             </button>
           </li>
+          {/* End Menu Icon */}
+
+          {/* Logo */}
           <li>
-            <a href="/" class='logo flex text-2xl'>
+            <a href="/timecrystal" class='logo flex text-2xl'>
               <p class='text-blanco'>Time</p><p class='text-principal'>Crystal</p>
             </a>
           </li>
+          {/*End Logo */}
+
         </ul>
         <ul className='flex h-16 items-center'>
           <li className='notificacion pl-4'><a href="/"><svg
@@ -59,7 +66,7 @@ function NavBar() {
 
       <div className={`${!open && 'hidden'} mt-20 bg-gris/40 min-h-screen w-full fixed backdrop-blur-sm`} onClick={() => setOpen(false)}>
       </div>
-      <div className={`${open ? ' w-50 px-2' : ' w-0'} flex-col fixed space-y-10 min-h-screen mt-20 justify-between bg-gris transition-all duration-300`}>
+      <div className={`${open ? ' w-50 px-2' : ' w-0'} flex-col fixed space-y-10 min-h-screen mt-20 justify-between bg-gris transition-all duration-300 z-10`}>
         <ul className={`${!open && 'hidden'} `}>
           <li>
             <Link className='flex rounded-md items-center gap-4 px-3 py-2 text-blanco hover:text-principal hover:bg-fondo/20'>
@@ -91,7 +98,8 @@ function NavBar() {
                 <polyline points="12 9 12 12 13.5 13.5">
                 </polyline>
                 <path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83">
-                </path></svg>
+                </path>
+              </svg>
               <p>Recordatorios</p>
             </Link>
           </li>
