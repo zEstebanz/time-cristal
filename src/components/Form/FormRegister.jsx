@@ -1,24 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { registerRequest } from '../../api/auth.js';
 
 const FormRegister = () => {
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        // Aquí puedes manejar la lógica de envío del formulario
-    };
+    const { register, handleSubmit } = useForm();
 
     return (
-        <form onSubmit={handleSubmit} className="bg-gris rounded-lg p-8 shadow-md w-80 mt-8">
+        <form onSubmit={handleSubmit(async(values) => {
+            console.log(values);
+            const res = await registerRequest(values)
+            console.log(res)
+        })} className="bg-gris rounded-lg p-8 shadow-md w-80 mt-8">
             <div className="mb-4">
                 <label className="block text-blanco text-sm font-bold mb-2" htmlFor="username">
                     Username
                 </label>
                 <input
                     className="appearance-none border-none rounded w-full py-2 px-3 text-gray-700 bg-[#222] leading-tight focus:outline-none focus:shadow-outline text-white"
+                    placeholder="Enter your username"
                     id="username"
                     type="text"
-                    placeholder="Enter your username"
+                    {...register('username', { required: true })}
                 />
             </div>
             <div className="mb-4">
@@ -27,9 +31,10 @@ const FormRegister = () => {
                 </label>
                 <input
                     className="appearance-none border-none rounded w-full py-2 px-3 text-gray-700 bg-[#222] leading-tight focus:outline-none focus:shadow-outline text-white"
+                    placeholder="Enter your mail"
                     id="mail"
                     type="text"
-                    placeholder="Enter your mail"
+                    {...register('mail', { required: true })}
                 />
             </div>
             <div className="mb-6">
@@ -38,9 +43,10 @@ const FormRegister = () => {
                 </label>
                 <input
                     className="appearance-none border-none rounded w-full py-2 px-3 text-gray-700 bg-[#222] leading-tight focus:outline-none focus:shadow-outline text-white"
+                    placeholder="Enter your password"
                     id="password"
                     type="password"
-                    placeholder="Enter your password"
+                    {...register('password', { required: true })}
                 />
             </div>
             <div className='mb-4'>

@@ -2,13 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FormLogin = () => {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        // Aquí puedes manejar la lógica de envío del formulario
-    };
 
     return (
-        <form onSubmit={handleSubmit} className="bg-gris rounded-lg p-8 shadow-md w-80 mt-8 dark:border dark:border-inherit">
+        <form  className="bg-gris rounded-lg p-8 shadow-md w-80 mt-8 dark:border dark:border-inherit">
             <div className="mb-4">
                 <label className="block text-blanco text-sm font-bold mb-2" htmlFor="username">
                     Username
