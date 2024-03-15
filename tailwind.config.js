@@ -24,9 +24,14 @@ module.exports = {
         'gris': '#2D2E2E',
         'blanco': '#FBFBFB',
       },
-      fontFamily:{
-        body:['Noto Sans'],
+      fontFamily: {
+        body: ['Noto Sans'],
       },
+
+      backgroundImage: theme => ({
+        'custom-gradient': 'linear-gradient(45deg, rgba(7, 7, 7, 1) 35%, rgba(34, 34, 34, 1) 100%)'
+      }),
+
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -41,6 +46,7 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+
     },
   },
   plugins: [require("tailwindcss-animate")],
