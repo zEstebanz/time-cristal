@@ -1,79 +1,15 @@
-$dark: #222;
-$dark-transparente: #000000e2;
-$awita: #4C9F70;
-$awita-transparente: #184b2edd;
-$turquesa: #27c096;
-
-.section-home {
-  // background-image: url("../../../public/background/kali-bg.png");
-  background: linear-gradient(45deg, rgba(7, 7, 7, 1) 35%, rgba(34, 34, 34, 1) 100%);
-  min-height: 100vh;
-  height: auto;
-  padding-top: 100px;
-  z-index: 0;
-  overflow-x: auto;
-
-  .content-wrapper {
-    display: flex; // Usar flexbox para alinear los elementos horizontalmente
-    flex-wrap: nowrap; // Evitar que los elementos se envuelvan a la siguiente línea
-    padding: 20px; // Espacio alrededor del contenido
-  }
-
-  .card-container {
-    display: flex; // Usar flexbox para alinear los elementos horizontalmente
-    flex-wrap: nowrap; // Evitar que los elementos se envuelvan a la siguiente línea
-  }
-
-  /* Componente Calendar */
-  .calendar {
-    background-color: $dark;
-    border-radius: 20px;
-    flex: 0 0 auto; // No crecer ni encoger las tarjetas
-    margin-right: 20px; // Espacio entre cada tarjeta
-    padding: 20px; // Ajustar el espacio interior según sea necesario
-
-    h1 {
-      color: white;
-      text-align: center;
-      padding: 8px;
-      font-weight: 800;
-    }
-
-    hr {
-      margin: 0 15px;
-      margin-top: 0px;
-      border-color: white;
-      border-width: 1px;
-    }
-
-    .reminder {
-      padding: 8px;
-
-      h3 {
-        color: $awita;
-        font-size: 10px;
-      }
-
-      h2 {
-        color: white;
-        font-size: 14px;
-        font-weight: 800;
-      }
-    }
-  }
-
-  /* End Componente Calendar */
-
 
   /* Componente Time */
   .time {
+    position: absolute;
+    height: 50px;
+    width: 200px;
     background-color: #222;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(20, 146, 127, 0.5);
-    margin-right: 20px;
-    padding: 8px;
-    height: 50px;
-    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
 
     h1 {
       color: white;
@@ -86,16 +22,15 @@ $turquesa: #27c096;
 
   /* Componente Rutine */
   .card-rutine {
+    position: absolute;
+    height: 400px;
+    width: 200px;
     background-color: #222;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    flex: 0 0 auto;
-    margin-right: 20px;
-    padding: 20px;
-
-    @media screen and (min-width: 726px) {
-      width: 400px;
-    }
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
 
     h1 {
       color: white;
@@ -163,18 +98,18 @@ $turquesa: #27c096;
         margin-top: 20px;
       }
     }
-
   }
-
   /* End Componente Rutine */
 
   /* Componente Note */
   .note {
+    position: absolute;
     background-color: $dark;
     border-radius: 20px;
-    flex: 0 0 auto; // No crecer ni encoger las tarjetas
-    margin-right: 20px; // Espacio entre cada tarjeta
-    padding: 20px; // Ajustar el espacio interior según sea necesario
+    width: 500px;
+    height: 150px;
+    right: 50px;
+    top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,16 +131,20 @@ $turquesa: #27c096;
       margin-top: 20px;
     }
   }
-
   /* End Componente Note */
 
   /* Component Projects */
   .projects {
+
+    position: absolute;
     background-color: $dark;
     border-radius: 20px;
-    flex: 0 0 auto; // No crecer ni encoger las tarjetas
-    margin-right: 20px; // Espacio entre cada tarjeta
-    padding: 20px; // Ajustar el espacio interior según sea necesario
+
+    width: 500px;
+    height: 300px;
+
+    right: 50px;
+    top: 220px;
 
     h1 {
       color: white;
@@ -214,8 +153,9 @@ $turquesa: #27c096;
       font-weight: 800;
     }
 
+
     .swiper {
-      width: 200px;
+      width: 100%;
       height: 200px;
       padding: 8px;
       border-radius: 20px;
@@ -242,7 +182,7 @@ $turquesa: #27c096;
 
     .swiper-pagination-bullet {
       background-color: white;
-      color: #fdfdfe;
+      color: #FDFDFE;
       opacity: 1;
     }
 
@@ -273,23 +213,6 @@ $turquesa: #27c096;
         /* Tamaño del icono */
       }
     }
+
   }
-
   /* End Component Projects */
-
-}
-
-.section-form {
-  background: linear-gradient(45deg, rgba(7, 7, 7, 1) 35%, rgba(34, 34, 34, 1) 100%);
-  height: 100vh;
-
-}
-
-/* Componentes */
-
-
-// 'fondo': '#0F0F0F',
-//         'principal': '#4C9F70',
-//         'secundario': '#A18262',
-//         'gris': '#2D2E2E',
-//         'blanco': '#FBFBFB',

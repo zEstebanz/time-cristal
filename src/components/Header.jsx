@@ -6,29 +6,40 @@ import Rutine from './Home/Rutine'
 import Notes from './Home/Notes'
 
 function Header() {
+    // Determinar el tamaño de la pantalla
+    const isSmallScreen = window.innerWidth <= 796;
 
     return (
         <>
             <NavBar />
             <section className='section-home'>
+                <div className="content-wrapper">
+                    <div className="card-container">
+                        {/* Mostrar componentes según el tamaño de la pantalla */}
+                        {isSmallScreen ? (
+                            <>
+                                <Rutine />
+                                <Diary />
+                                <Notes />
+                                <Projects />
+                            </>
+                        ) : (
+                            <>
+                                <Diary />
+                                <Rutine />
+                                <Notes />
+                                <Projects />
+                            </>
+                        )}
 
-                <div className="card-container">
-
-                    <Diary />
-                    <CardTime />
-                    <Rutine />
-                    <Notes />
-                    <Projects />
-
+                    </div>
                 </div>
-
             </section>
-
         </>
     )
 }
 
-export default Header
+export default Header;
 
 {/* <div class='flex justify-center pt-[100px]'>
                     <div class='bg-[#000000e2] rounded-[15px] h-[50px] w-[250px] shadow-xl'>

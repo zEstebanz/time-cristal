@@ -10,8 +10,8 @@ function MyCalendar() {
     };
 
     return (
-        
-        <div className='flex justify-center'>
+
+        <div className='flex justify-center' style={{ backgroundColor: '#222' }}>
             <Calendar
                 onChange={onChange}
                 value={date}
