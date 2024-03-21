@@ -1,4 +1,4 @@
-import {port,log,text,sign,sist,href,error,warning,arrow,lamda,app} from "./app.js"
+import {port,log,text,sign,sist,href,arrow,app} from "./app.js"
 import { connectDB } from "./db.js";
 app.listen(port);
 const startTime = Date.now()

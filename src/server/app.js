@@ -1,6 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
+import cors from 'cors'
 import chalk from "chalk";
 import authRoutes from "./routes/auth.routes.js"
 import taskRoutes from "./routes/task.routes.js"
@@ -24,6 +25,9 @@ export const leaf = sist(` 🙐 `);
 //server settings
 export const port = 3000;
 export const app = express();
+app.use(cors({
+  origin:'http://localhost:5173'
+}));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
