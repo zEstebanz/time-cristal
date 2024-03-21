@@ -6,6 +6,8 @@ import { log, text, sign, sist, href, error, warning, arrow, lamda, leaf } from 
 export const register = async (req, res) => {
     const { email, password, username } = req.body;
     try {
+        const userFound = await User.findOne({ email });
+        if (userFound) return res.status(400).json(["The email is alredy in use"]);
         const passwordHash = await bcrypt.hash(password, 10);
         const newUser = new User({
             username,
