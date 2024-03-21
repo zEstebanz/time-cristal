@@ -1,0 +1,319 @@
+$dark: #222;
+$dark-transparente: #000000e2;
+$awita: #4C9F70;
+$awita-transparente: #184b2edd;
+$turquesa: #27c096;
+
+.section-home {
+  // background-image: url("../../../public/background/kali-bg.png");
+  background: linear-gradient(45deg, rgba(7, 7, 7, 1) 35%, rgba(34, 34, 34, 1) 100%);
+  min-height: 100vh;
+  height: auto;
+  padding-top: 100px;
+  z-index: 0;
+  
+  .card-container {
+    position: relative;
+    height: 100vh;
+    /* Otros estilos */
+    width: auto;
+    /* Ajustar el ancho automáticamente */
+    min-width: 100%;
+    /* Garantizar que ocupe todo el ancho disponible */
+  }
+
+  .calendar {
+    position: absolute;
+    background-color: $dark;
+    border-radius: 20px;
+
+    width: 500px;
+    height: 470px;
+
+    left: 50px;
+    top: 50px;
+
+    h1 {
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-weight: 800;
+    }
+
+    hr {
+      margin: 0 15px;
+      margin-top: 0px;
+      border-color: white;
+      border-width: 1px;
+    }
+
+    .reminder {
+      padding: 8px;
+
+      h3 {
+        color: $awita;
+        font-size: 10px;
+      }
+
+      h2 {
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .time {
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    background-color: #222;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(20, 146, 127, 0.5);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+
+    h1 {
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-weight: 800;
+    }
+  }
+
+  .card-rutine {
+    position: absolute;
+    height: 400px;
+    width: 200px;
+    background-color: #222;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    h1 {
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-weight: 800;
+    }
+
+    hr {
+      border-color: white;
+      border-width: 1px;
+      margin: 0 15px;
+    }
+
+    .list-rutine {
+      ul {
+        padding: 16px;
+        list-style: none;
+      }
+
+      li {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      label {
+        display: inline-block;
+        color: white;
+        cursor: pointer;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border: 2px solid #27c096;
+          border-radius: 20px;
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+      }
+
+      input[type="checkbox"]:checked+label:before {
+        background-color: #27c096;
+      }
+
+    }
+
+    .container-button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .button-rutine {
+        color: white;
+        font-weight: 600;
+        background-color: $turquesa;
+        padding: 8px;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .note {
+    position: absolute;
+    background-color: $dark;
+    border-radius: 20px;
+    width: 500px;
+    height: 150px;
+    right: 50px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-weight: 800;
+    }
+
+    .button-note {
+      font-weight: 600;
+      color: white;
+      background-color: $turquesa;
+      padding: 8px;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  .projects {
+
+    position: absolute;
+    background-color: $dark;
+    border-radius: 20px;
+
+    width: 500px;
+    height: 300px;
+
+    right: 50px;
+    top: 220px;
+
+    h1 {
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-weight: 800;
+    }
+
+
+    .swiper {
+      width: 100%;
+      height: 200px;
+      padding: 8px;
+      border-radius: 20px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: $turquesa;
+      border-radius: 20px;
+
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: white;
+      color: #FDFDFE;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: black;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: $dark;
+    }
+
+    /* Estilos para el icono de flecha */
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 12px;
+      font-weight: 800;
+      /* Tamaño del icono */
+    }
+
+    @media screen and (min-width: 767px) {
+
+      /* Estilos para el icono de flecha */
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        font-size: 22px;
+        font-weight: 800;
+        /* Tamaño del icono */
+      }
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    overflow-x: auto;
+    white-space: nowrap;
+
+    .card-container {
+      width: auto;
+      min-width: 100%;
+      height: auto;
+    }
+
+    .calendar,
+    .note,
+    .projects {
+      width: 100%;
+      min-width: 300px; // o el ancho mínimo deseado para cada elemento
+    }
+
+    .calendar,
+    .note,
+    .projects,
+    .time,
+    .card-rutine {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+    }
+  }
+}
+
+.section-form {
+  background: linear-gradient(45deg, rgba(7, 7, 7, 1) 35%, rgba(34, 34, 34, 1) 100%);
+  height: 100vh;
+
+}
+
+/* Componentes */
+
+
+// 'fondo': '#0F0F0F',
+//         'principal': '#4C9F70',
+//         'secundario': '#A18262',
+//         'gris': '#2D2E2E',
+//         'blanco': '#FBFBFB',

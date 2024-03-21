@@ -1,12 +1,15 @@
+import { BrowserRouter } from 'react-router-dom'
 import './assets/styles/App.scss'
-import Header from './components/Header'
+import { AuthProvider } from './context/UserContext'
+import AppRouter from './router/AppRouter'
 
 function App() {
-
   return (
-    <main>
-      <Header />
-    </main>
+    <AuthProvider>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
+    </AuthProvider>
   )
 }
 
